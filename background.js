@@ -1,5 +1,11 @@
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) { return {cancel: true}; },
-    {urls: ["*://www.yahoo.com/*"]},
+    {urls: [
+    	"*://*.deredactie.be/*",
+    	"*://*.vrt.be/vrtnws/*",
+    	"*://*.demorgen.be/*",
+    	"*://*.standaard.be/*",
+    	"*://*.hln.be/*"
+    ]},
     ["blocking"]
 );
